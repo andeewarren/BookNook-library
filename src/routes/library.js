@@ -1,8 +1,8 @@
 import React from "react";
 import { BookList } from "../components/BookList";
 
-export default function Library({books}) {
+export default function Library( {books, onDelete} ) {
     return (
-        <BookList list={books} />
+        <BookList books={books} onDelete={onDelete} />
     )
 }

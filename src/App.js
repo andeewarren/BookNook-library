@@ -41,20 +41,34 @@ function App() {
 
       const newBook = await response.json();
       setBooks((prevBooks) => [...prevBooks, newBook]);
+      console.log("New book added successfuly");
     } catch (error) {
       console.error(error);
     }
   };
 
+  const handleDelete = (id) => {
+    fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        // remove the deleted book from the state
+        setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
+        fetchBooks();
+        console.log("Book deleted successfully.")
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div>
       <BookForm onAddBook={handleAddBook}  />
-      <BookList books={books} />
-      {/* <BrowserRouter>
+      {/* <BookList books={books} /> */}
+      <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Library books={books} />}></Route>
+          <Route path='/' element={<Library books={books} onDelete={handleDelete} />}></Route>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
