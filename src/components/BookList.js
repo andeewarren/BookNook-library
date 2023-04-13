@@ -28,9 +28,11 @@ export function BookList(props) {
           .catch((error) => console.error(error));
       };
 
+    const sortedBooks = props.books.sort((a,b) => a.id - b.id);
+
     return (
         <>
-            {props.books.map((book) => (
+            {sortedBooks.reverse().map((book) => (
                 <BookCard key={book.id} book={book} onDelete={() => handleDelete(book.id)} />
             ))}
         </>
