@@ -23,19 +23,10 @@ export function BookCard({ book, onDelete }) {
         .catch(error => console.error(error));
     }
 
-    // const handleDelete = () => {
-    //     fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${book.id}`, {
-    //         method: 'DELETE'
-    //     })
-    //     .then(res => res.json())
-    //     .then(data => console.log(data))
-    //     .catch(error => console.error(error));
-    // }
-
     return (
         
         <Card className='book-card'>
-            <Card.Img variant='top' src={book.img} />
+            <Card.Img variant='top' src={book.image} />
             <Card.Body>
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>

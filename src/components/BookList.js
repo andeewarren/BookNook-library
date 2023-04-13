@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { BookCard } from "./BookCard";
 
-export function BookList() {
+export function BookList(props) {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export function BookList() {
 
     return (
         <>
-            {books.map((book) => (
+            {props.books.map((book) => (
                 <BookCard key={book.id} book={book} onDelete={() => handleDelete(book.id)} />
             ))}
         </>
