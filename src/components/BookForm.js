@@ -11,12 +11,18 @@ export function BookForm( props ) {
     const handleSubmit = (e) => {
         e.preventDefault();
         const bookData = { title, author, image, genre, readStatus };
+        
+        if (bookData.image == '') {
+            bookData.image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnKgLLxViflUuJStAO9ur5Of0ctQaGM3LC42SqkqiGSpbqKYpNDxVpWHcEkKL9zz6RUTY&usqp=CAU";
+        }
+
         props.onAddBook(bookData);
         setTitle('');
         setAuthor('');
         setImage('');
         setGenre('');
         setReadStatus('TBR');
+        //TODO figure out how to automatically return to library page
     }
     
 
@@ -53,10 +59,10 @@ export function BookForm( props ) {
                     <FormGroup className="mb-3" controlId="formReadStatus">
                         <Form.Label className='label'>Read Status</Form.Label>
                         <Form.Select value={readStatus} onChange={(event) => setReadStatus(event.target.value)}>
-                        <option>Select read status</option>
-                        <option value="TBR">TBR</option>
-                        <option value="In Progress">In Progress</option>
-                        <option value="Read">Read</option>
+                            <option>Select read status</option>
+                            <option value="TBR">TBR</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Read">Read</option>
                         </Form.Select>
                     </FormGroup>
                 </Col>

@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { BookList } from './components/BookList';
 import { BookForm } from './components/BookForm';
 import Library from './routes/library';
+import AddBook from './routes/addBook';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -61,15 +64,21 @@ function App() {
   };
 
   return (
+    <BrowserRouter>
     <div>
-      <BookForm onAddBook={handleAddBook}  />
+      
+      
+      <Header />
+      {/* <BookForm onAddBook={handleAddBook}  /> */}
       {/* <BookList books={books} /> */}
-      <BrowserRouter>
         <Routes>
           <Route path='/' element={<Library books={books} onDelete={handleDelete} />}></Route>
+          <Route path='/add' element={<AddBook onAddBook={handleAddBook}/>}></Route>
         </Routes>
-      </BrowserRouter>
+      
+      <Footer />
     </div>
+    </BrowserRouter>
   );
 }
 
