@@ -4,6 +4,7 @@ import { BookList } from './components/BookList';
 import { BookForm } from './components/BookForm';
 import Library from './routes/library';
 import AddBook from './routes/addBook';
+import Statistics from './routes/statistics';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
@@ -74,6 +75,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Library books={books} onDelete={handleDelete} />}></Route>
           <Route path='/add' element={<AddBook onAddBook={handleAddBook}/>}></Route>
+          <Route path='/statistics' element={<Statistics books={books} />}></Route>
         </Routes>
       
       <Footer />

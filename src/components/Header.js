@@ -11,6 +11,7 @@ function Header() {
              <ul className='nav-links'>
                 <Link to='/' relative='path'>My Library</Link>
                 <Link to='/add'>Add Book</Link>
+                <Link to='/statistics'>Library Info</Link>
              </ul>
         </div>
     );
