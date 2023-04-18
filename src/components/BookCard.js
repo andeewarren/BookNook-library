@@ -3,25 +3,17 @@ import { useState } from "react";
 import { Card } from "react-bootstrap";
 import { DeleteButton } from "./DeleteButton";
 
-export function BookCard({ book, onDelete }) {
+export function BookCard({ book, onDelete, onUpdate }) {
     const [readStatus, setReadStatus] = useState(book.readStatus);
 
+    //readStatus only updating on refresh - add function to app.js?
 
-    const handleUpdateReadStatus = (newStatus) => {
-        fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${book.id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ readStatus: newStatus })
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            setReadStatus(newStatus);
-        })
-        .catch(error => console.error(error));
-    }
+    const handleUpdateReadStatus = (e) => {
+        // const newStatus = e.target.value;
+        console.log('onUpdate function:', onUpdate);
+        setReadStatus(e.target.value);
+        onUpdate(e);
+      };
 
     return (
         
@@ -32,7 +24,7 @@ export function BookCard({ book, onDelete }) {
                 <Card.Text>
                     by {book.author}
                     {book.genre}
-                    <select value={book.readStatus} onChange={(e) => handleUpdateReadStatus(book.id, e.target.value)}>
+                    <select value={book.readStatus} onChange={handleUpdateReadStatus}>
                         <option value="Read">Read</option>
                         <option value="In Progress">In progress</option>
                         <option value="TBR">TBR</option>

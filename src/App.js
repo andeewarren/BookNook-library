@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { BookList } from './components/BookList';
-import { BookForm } from './components/BookForm';
+// import { BookList } from './components/BookList';
+// import { BookForm } from './components/BookForm';
 import Library from './routes/library';
 import AddBook from './routes/addBook';
 import Statistics from './routes/statistics';
@@ -50,6 +50,7 @@ function App() {
       console.error(error);
     }
   };
+
 
   const handleDelete = (id) => {
     fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${id}`, {

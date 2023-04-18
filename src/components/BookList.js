@@ -2,14 +2,14 @@ import React from "react";
 // import { useState, useEffect } from "react";
 import { BookCard } from "./BookCard";
 
-export function BookList(props) {
+export function BookList({ books, onDelete, onUpdate }) {
 
-    const sortedBooks = props.books.sort((a,b) => a.id - b.id);
+    const sortedBooks = books.sort((a,b) => a.id - b.id);
 
     return (
         <>
             {sortedBooks.reverse().map((book) => (
-                <BookCard key={book.id} book={book} onDelete={() => props.onDelete(book.id)} />
+                <BookCard key={book.id} book={book} onDelete={() => onDelete(book.id)} onUpdate={(e) => onUpdate(book.id, e.target.value)} />
             ))}
         </>
     )
