@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     fetchBooks();
-  }, []);
+  }, [books]);
 
   const fetchBooks = async () => {
     try {
@@ -51,6 +51,18 @@ function App() {
     }
   };
 
+  // const handleDelete = async (id) => {
+  //   try {
+  //     const response = await fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${id}`, {
+  //       method: 'DELETE',
+  //     })
+  //     const data = await response.json;
+  //     console.log(data, response);
+  //     return data;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   const handleDelete = (id) => {
     fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${id}`, {
@@ -58,14 +70,18 @@ function App() {
     })
       .then(() => {
         // remove the deleted book from the state
+        
+        
         setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
-        fetchBooks();
+        
         console.log("Book deleted successfully.")
       })
       .catch((error) => console.error(error));
+      fetchBooks();
   };
 
   return (
+    // console.log('check render'),
     <BrowserRouter>
     <div>
       

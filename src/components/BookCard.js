@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
 import { DeleteButton } from "./DeleteButton";
 
@@ -7,6 +7,8 @@ export function BookCard({ book, onDelete, onUpdate }) {
     const [readStatus, setReadStatus] = useState(book.readStatus);
 
     //readStatus only updating on refresh - add function to app.js?
+
+    
 
     const handleUpdateReadStatus = (e) => {
         // const newStatus = e.target.value;
