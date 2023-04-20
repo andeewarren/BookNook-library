@@ -45,6 +45,6 @@ export default function Library( { onDelete} ) {
 
 
     return (
-        <BookList books={books} onDelete={onDelete} onUpdate={handleUpdateReadStatus} />
+        <BookList id="library" books={books} onDelete={onDelete} onUpdate={handleUpdateReadStatus} />
     )
 }
