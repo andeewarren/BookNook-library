@@ -14,74 +14,70 @@ function App() {
 
   useEffect(() => {
     fetchBooks();
-  }, [books]);
+  }, []);
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('https://640a21d16ecd4f9e18c5cb25.mockapi.io/books');
+      const response = await fetch(
+        'https://640a21d16ecd4f9e18c5cb25.mockapi.io/books'
+        );
       if (!response.ok) {
         throw new Error('Failed to fetch books.');
       }
       const data = await response.json();
-      setBooks(data);
+      console.log('data:', data);
+      return setBooks(data);
     } catch (error) {
       console.error(error);
     }
   };
 
   const handleAddBook = async (bookData) => {
+    console.log('add works!')
+    console.log('bookData:', bookData)
+
     try {
-      const response = await fetch('https://640a21d16ecd4f9e18c5cb25.mockapi.io/books', {
+      const response = await fetch(
+        'https://640a21d16ecd4f9e18c5cb25.mockapi.io/books', 
+        {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(bookData),
-      });
+        }
+      );
 
       if (!response.ok) {
         throw new Error('Failed to add book.');
       }
 
-      const newBook = await response.json();
-      setBooks((prevBooks) => [...prevBooks, newBook]);
+      // const newBook = await response.json();
+      // setBooks((prevBooks) => [...prevBooks, newBook]);
+      fetchBooks();
       console.log("New book added successfuly");
     } catch (error) {
       console.error(error);
     }
   };
 
-  // const handleDelete = async (id) => {
-  //   try {
-  //     const response = await fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${id}`, {
-  //       method: 'DELETE',
-  //     })
-  //     const data = await response.json;
-  //     console.log(data, response);
-  //     return data;
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
 
-  const handleDelete = (id) => {
-    fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${id}`, {
-      method: "DELETE",
-    })
-      .then(() => {
-        // remove the deleted book from the state
-        
-        
-        setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
-        
-        console.log("Book deleted successfully.")
-      })
-      .catch((error) => console.error(error));
-      fetchBooks();
+  const handleDelete = async (id) => {
+    console.log('delete works!')
+    try {
+      await fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${id}`, {
+        method: "DELETE",
+      });
+      console.log('Book deleted successfully.');
+    } catch (error) {
+      console.error(error);
+    }
+
+    await fetchBooks();
   };
 
+
   return (
-    // console.log('check render'),
     <BrowserRouter>
     <div>
       
@@ -90,9 +86,14 @@ function App() {
       {/* <BookForm onAddBook={handleAddBook}  /> */}
       {/* <BookList books={books} /> */}
         <Routes>
-          <Route path='/' element={<Library books={books} onDelete={handleDelete} />}></Route>
-          <Route path='/add' element={<AddBook onAddBook={handleAddBook}/>}></Route>
-          <Route path='/statistics' element={<Statistics books={books} />}></Route>
+          <Route path='/' 
+          element={<Library books={books} onDelete={handleDelete} fetchBooks={fetchBooks} />}
+          ></Route>
+          <Route path='/add' 
+          element={<AddBook onAddBook={handleAddBook} fetchBooks={fetchBooks} />}
+          ></Route>
+          <Route path='/statistics' 
+          element={<Statistics books={books} />}></Route>
         </Routes>
       
       <Footer />
