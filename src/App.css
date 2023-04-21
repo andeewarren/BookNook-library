@@ -2,12 +2,11 @@
   text-align: center;
 }
 
-
 .navbar {
   width: 100%;
   min-height: 10vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: #fff;
   background: rgba(29, 161, 242, 1);
@@ -22,6 +21,7 @@
   width: 40%;
   display: flex;
   justify-content: right;
+  margin-right: 0;
   list-style: none;
 }
 
@@ -33,9 +33,4 @@
 .nav-links > * {
   padding: 8px;
 }
-
-/* .book-list {
-  display: flex;
-  justify-content: space-around;
-} */
 
