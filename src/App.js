@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Library from './routes/library';
 import AddBook from './routes/addBook';
 import Statistics from './routes/statistics';
+import Login from './routes/login';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
@@ -76,6 +77,37 @@ function App() {
     await fetchBooks();
   };
 
+    const handleUpdate = async (id, newStatus) => {
+    try {
+      const response = await fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ readStatus: newStatus }),
+    }
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to update book.');
+    }
+
+    fetchBooks();
+    console.log('Book updated successfully.');
+      // .then((res) => res.json())
+      // .then((data) => {
+      //   console.log(data);
+      //   const updatedBooks = books.map((book) =>
+      //     book.id === bookId ? { ...book, readStatus: newStatus } : book
+      //   );
+      //   setBooks(updatedBooks);
+      // })
+  } catch (error) {
+    console.error(error)
+  }
+      // .catch((error) => console.error(error));
+  };
+
 
   return (
     <BrowserRouter>
@@ -87,13 +119,15 @@ function App() {
       {/* <BookList books={books} /> */}
         <Routes>
           <Route path='/' 
-          element={<Library books={books} onDelete={handleDelete} fetchBooks={fetchBooks} />}
+          element={<Library books={books} onDelete={handleDelete} fetchBooks={fetchBooks} onUpdate={handleUpdate} />}
           ></Route>
           <Route path='/add' 
           element={<AddBook onAddBook={handleAddBook} fetchBooks={fetchBooks} />}
           ></Route>
           <Route path='/statistics' 
           element={<Statistics books={books} />}></Route>
+          <Route path='/login'
+          element={<Login />}></Route>
         </Routes>
       
       <Footer />

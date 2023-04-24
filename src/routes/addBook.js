@@ -1,8 +1,8 @@
 import React from "react";
 import { BookForm } from "../components/BookForm";
 
-export default function AddBook({ handleAddBook }) {
+export default function AddBook({ onAddBook }) {
     return (
-        <BookForm onAddBook={handleAddBook}/>
+        <BookForm onAddBook={onAddBook}/>
     )
 }

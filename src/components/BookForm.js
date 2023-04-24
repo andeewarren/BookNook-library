@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Form, FormGroup, Button, Row, Col } from 'react-bootstrap';
 
-export function BookForm( props ) {
+export function BookForm( { onAddBook } ) {
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     const [image, setImage] = useState('');
     const [genre, setGenre] = useState('');
     const [readStatus, setReadStatus] = useState('TBR');
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -16,12 +19,13 @@ export function BookForm( props ) {
             bookData.image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnKgLLxViflUuJStAO9ur5Of0ctQaGM3LC42SqkqiGSpbqKYpNDxVpWHcEkKL9zz6RUTY&usqp=CAU";
         }
 
-        props.onAddBook(bookData);
+        onAddBook(bookData);
         setTitle('');
         setAuthor('');
         setImage('');
         setGenre('');
         setReadStatus('TBR');
+        navigate('/');
         //TODO figure out how to automatically return to library page
     }
     

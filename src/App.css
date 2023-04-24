@@ -21,7 +21,7 @@
   width: 40%;
   display: flex;
   justify-content: right;
-  margin-right: 0;
+  margin-right: 20px;
   list-style: none;
 }
 
@@ -32,5 +32,23 @@
 
 .nav-links > * {
   padding: 8px;
+}
+
+#grid {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#book-card {
+  display: flex;
+  height: 100%;
+  border: primary;
+  border-width: 2px;
+  text-align: center;
+}
+
+#delete {
+  align-items: flex-end;
 }
 

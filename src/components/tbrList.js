@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { BookCard } from './BookCard';
+import { Grid } from "@mui/material";
 
 export default function TBR({ books, onUpdate }) {
     //TODO: sort tbrList? by author? leave as is (aka order added)?
@@ -16,10 +17,12 @@ export default function TBR({ books, onUpdate }) {
   }
 
     return (
-        <div>
+      <Grid container spacing={2} id='grid'>
             {tbrList.map((book) => (
+              <Grid item xs='auto' key={book.id}>
                 <BookCard key={book.id} book={book} onUpdate={(e) => onUpdate(book.id, e.target.value)} />
+              </Grid>
             ))}
-        </div>
+      </Grid>  
     )
 }
