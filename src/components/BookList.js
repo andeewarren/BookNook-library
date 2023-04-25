@@ -10,7 +10,7 @@ export function BookList({ books, onDelete, onUpdate }) {
         <Grid container spacing={2} id='grid'>
             
             {sortedBooks.reverse().map((book) => (
-                <Grid item xs="auto" key={book.id}>
+                <Grid item xs='auto' key={book.id}>
                     
                         <BookCard key={book.id} book={book} onDelete={() => onDelete(book.id)} onUpdate={(e) => onUpdate(book.id, e.target.value)} />
                     

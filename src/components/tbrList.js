@@ -17,10 +17,10 @@ export default function TBR({ books, onUpdate }) {
   }
 
     return (
-      <Grid container spacing={2} id='grid'>
+      <Grid container spacing={2} id='tbr-grid'>
             {tbrList.map((book) => (
               <Grid item xs='auto' key={book.id}>
-                <BookCard key={book.id} book={book} onUpdate={(e) => onUpdate(book.id, e.target.value)} />
+                <BookCard id='tbr-card' key={book.id} book={book} onUpdate={(e) => onUpdate(book.id, e.target.value)} />
               </Grid>
             ))}
       </Grid>  

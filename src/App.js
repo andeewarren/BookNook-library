@@ -6,6 +6,7 @@ import Library from './routes/library';
 import AddBook from './routes/addBook';
 import Statistics from './routes/statistics';
 import Login from './routes/login';
+import Logout from './routes/logout';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
@@ -111,9 +112,9 @@ function App() {
 
   return (
     <BrowserRouter>
+    
     <div>
-      
-      
+      <div className='bg-image'></div>
       <Header />
       {/* <BookForm onAddBook={handleAddBook}  /> */}
       {/* <BookList books={books} /> */}
@@ -128,6 +129,8 @@ function App() {
           element={<Statistics books={books} />}></Route>
           <Route path='/login'
           element={<Login />}></Route>
+          <Route path='/logout'
+          element={<Logout />}></Route>
         </Routes>
       
       <Footer />

@@ -6,7 +6,7 @@ function LoginForm() {
         <>
         <h2>Welcome to BookNook!</h2>
         <h4>Please sign in:</h4>
-        <Form>
+        <Form id='login-form'>
             <Form.Label>Username/Email</Form.Label>
             <Form.Control type='username' placeholder='Username/Email'></Form.Control>
             <Form.Label>Password</Form.Label>
