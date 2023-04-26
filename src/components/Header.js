@@ -6,16 +6,6 @@ import { Navbar, NavDropdown, NavbarBrand, Nav } from 'react-bootstrap';
 
 function Header() {
     return (  
-        // <div className='navbar'>
-        //      <div className='logo'>
-        //          <img id="horizontal-logo" src={logo} alt='logo'></img>
-        //      </div>
-        //      <ul className='nav-links'>
-        //         <Link to='/' relative='path'>My Library</Link>
-        //         <Link to='/add'>Add Book</Link>
-        //         <Link to='/statistics'>Library Info</Link>
-        //      </ul>
-        // </div>
         <Navbar collapseOnSelect expand="lg" variant="dark">
             <LinkContainer to='/' relative='path'>
                 <NavbarBrand>
@@ -26,7 +16,8 @@ function Header() {
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" className='toggler' />
             <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className='mr-auto nav-link'>
+                
+                <Nav className='mr-auto nav-link'>
                     <LinkContainer to='/'>
                         <Nav.Link>My Library</Nav.Link>
                     </LinkContainer>
@@ -41,16 +32,16 @@ function Header() {
                         <Nav.Link>More Details</Nav.Link>
                     </LinkContainer>
                 </Nav>
-                <NavDropdown title='Account' id='basic-nav-dropdown' variant='dark'>
+                <NavDropdown title='Account' id='basic-nav-dropdown' className='nav-link' menuVariant='light'>
                     <LinkContainer to='/logout'>
-                        <NavDropdown.Item>Sign Out</NavDropdown.Item>
+                        <NavDropdown.Item href='#action/3.1'>Sign Out</NavDropdown.Item>
                     </LinkContainer>
                     <LinkContainer to='*'>
-                        <NavDropdown.Item>Settings</NavDropdown.Item>
+                        <NavDropdown.Item href='#action/3.2' disabled>Settings</NavDropdown.Item>
                     </LinkContainer>
                     <NavDropdown.Divider />
                     <LinkContainer to='/login'>
-                        <NavDropdown.Item>Sign In</NavDropdown.Item>
+                        <NavDropdown.Item href='#action/3.3'>Sign In</NavDropdown.Item>
                     </LinkContainer>
                 </NavDropdown>
                 </Navbar.Collapse>

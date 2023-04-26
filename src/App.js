@@ -133,7 +133,7 @@ function App() {
           element={<Logout />}></Route>
         </Routes>
       
-      <Footer />
+      {/* <Footer /> */}
     </div>
     </BrowserRouter>
   );

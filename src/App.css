@@ -1,5 +1,10 @@
 #root{
   background-image: url('assets/library-background-5.avif');
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   /* filter: blur(5px);
   -webkit-filter: blur(5px);
   height: 100%;
@@ -16,10 +21,10 @@
   width: 100%;
   min-height: 10vh;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   /* color: #FEFFF7; */
-  background: rgba(38, 51, 66, 0.8);
+  background: rgba(38, 51, 66, 0.9);
 }
 
 #horizontal-logo {
@@ -31,34 +36,45 @@
   color: #FEFFF7;
 }
 
-.nav-links > * {
-  padding: 8px;
-}
-
-.nav-links {
-  width: 40%;
-  display: flex;
-  justify-content: right;
-  margin-right: 20px;
+.nav-link {
   list-style: none;
+  color: #FEFFF7;
 }
 
 #grid {
-  margin-top: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 30px;
+  justify-content: center;
+  padding-bottom: 100px;
 }
 
-#book-card {
+.book-card {
   display: flex;
   height: 100%;
-  border: primary;
-  border-width: 2px;
+  /* align-items: center; */
   text-align: center;
+  border-radius: 8px;
+  background-color: rgba(228, 229, 231, 0.7);
+  color: #263342;
+  padding: 10px;
+}
+
+#card-image {
+  border-radius: 8px;
+}
+
+#genre {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#readStatus {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
 }
 
 #delete {
-  align-items: flex-end;
+  background-color: #263342;
 }
 
 #login-form {
@@ -68,4 +84,25 @@
   margin-right: auto;
   padding: 60px;
   border-radius: 8px;
+}
+
+.footer {
+  background: rgba(38, 51, 66, 0.9);
+  width: 100%;
+  min-height: 10vh;
+  position: fixed;
+  bottom: 0;
+  /* margin-top: auto; */
+  /* margin-bottom: 0px; */
+  text-align: center;
+  color:#FEFFF7;
+  padding: 20px;
+}
+
+.footer a {
+  color:#FEFFF7;
+}
+
+.footer a:visited {
+  color: #A19399;
 }
