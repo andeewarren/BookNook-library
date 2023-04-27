@@ -4,6 +4,6 @@ import { Button } from "react-bootstrap";
 export function DeleteButton({ onClick }) {
 
     return (
-            <Button onClick={onClick}>Delete</Button>
+            <Button className='button' variant='dark' onClick={onClick}>Delete</Button>
         )
 }

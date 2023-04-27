@@ -29,7 +29,7 @@ function Header() {
                 </Nav>
                 <Nav className='mr-auto nav-link'>
                     <LinkContainer to='/statistics'>
-                        <Nav.Link>More Details</Nav.Link>
+                        <Nav.Link>To Be Read</Nav.Link>
                     </LinkContainer>
                 </Nav>
                 <NavDropdown title='Account' id='basic-nav-dropdown' className='nav-link' menuVariant='light'>

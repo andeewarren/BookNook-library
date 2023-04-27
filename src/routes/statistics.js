@@ -44,7 +44,7 @@ export default function Statistics() {
     
     return (
         <>
-            <ListLength books={books} />
+            {/* <ListLength books={books} /> */}
             <TBR books={books} onUpdate={handleUpdateReadStatus} />
         </>
     )

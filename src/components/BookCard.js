@@ -44,7 +44,7 @@ export function BookCard({ book, onDelete, onUpdate }) {
                         </Row>
                     </Row>
                 </Card.Body>
-                <DeleteButton id='delete' onClick={onDelete} />
+                <DeleteButton onClick={onDelete} />
             </Card.Body>
         </Card>
         )
