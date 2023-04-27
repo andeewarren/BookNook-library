@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Button, FloatingLabel } from 'react-bootstrap';
+// import { FaFacebook, FaGoogle } from 'react-icons/fa';
 
 function LoginForm() {
     return (  
@@ -8,7 +9,6 @@ function LoginForm() {
         <Form id='login-form'>
             <h2>Welcome to BookNook!</h2>
             <h4>Please sign in:</h4>
-            
             {/* <Form.Label>Username/Email</Form.Label> */}
             <FloatingLabel
                 controlId="floatingInput"

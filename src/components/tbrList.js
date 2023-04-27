@@ -14,9 +14,11 @@ export default function TBR({ books, onUpdate }) {
     
   if (tbrList.length === 0){
     return <p>You do not currently have any books in your TBR pile</p>
-  }
+  } 
 
     return (
+      <>
+      <h4 id='tbr-length'>You currently have {tbrList.length} books in your TBR pile.</h4>
       <Grid container spacing={2} id='tbr-grid'>
             {tbrList.map((book) => (
               <Grid item xs='auto' key={book.id}>
@@ -24,5 +26,6 @@ export default function TBR({ books, onUpdate }) {
               </Grid>
             ))}
       </Grid>  
+      </>
     )
 }
