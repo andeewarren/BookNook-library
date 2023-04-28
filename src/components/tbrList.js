@@ -13,12 +13,12 @@ export default function TBR({ books, onUpdate }) {
   }, [books]);
     
   if (tbrList.length === 0){
-    return <p>You do not currently have any books in your TBR pile</p>
+    return <p>You do not currently have any books in your TBR pile</p> //returns a message when TBR list is empty
   } 
 
     return (
       <>
-      <h4 id='tbr-length'>You currently have {tbrList.length} books in your TBR pile.</h4>
+      <h4 id='tbr-length'>You currently have {tbrList.length} books in your TBR pile.</h4> {/* returns number of books you have left to read */}
       <Grid container spacing={2} id='tbr-grid'>
             {tbrList.map((book) => (
               <Grid item xs='auto' key={book.id}>

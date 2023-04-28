@@ -5,11 +5,12 @@ import { Form, Button, FloatingLabel } from 'react-bootstrap';
 function LoginForm() {
     return (  
         <>
-        
+        {/* future goal: add FB/Google/Apple login a feature */ }
         <Form id='login-form'>
             <h2>Welcome to BookNook!</h2>
             <h4>Please sign in:</h4>
-            {/* <Form.Label>Username/Email</Form.Label> */}
+            {/* <Form.Label>Username/Email</Form.Label> 
+            changed from form label to floating label */}
             <FloatingLabel
                 controlId="floatingInput"
                 label="Username/Email"

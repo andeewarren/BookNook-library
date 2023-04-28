@@ -120,10 +120,10 @@ function App() {
       {/* <BookList books={books} /> */}
         <Routes>
           <Route path='/' 
-          element={<Library books={books} onDelete={handleDelete} fetchBooks={fetchBooks} onUpdate={handleUpdate} />}
+          element={<Library books={books} onDelete={handleDelete} fetchBooks={fetchBooks} onUpdate={handleUpdate} />} //pass down books, delete, fetch and update
           ></Route>
           <Route path='/add' 
-          element={<AddBook onAddBook={handleAddBook} fetchBooks={fetchBooks} />}
+          element={<AddBook onAddBook={handleAddBook} fetchBooks={fetchBooks} />} //pass down add and fetch
           ></Route>
           <Route path='/statistics' 
           element={<Statistics books={books} />}></Route>

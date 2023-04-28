@@ -6,10 +6,6 @@ import { DeleteButton } from "./DeleteButton";
 export function BookCard({ book, onDelete, onUpdate }) {
     const [readStatus, setReadStatus] = useState(book.readStatus);
 
-    //readStatus only updating on refresh - add function to app.js?
-
-    
-
     const handleUpdateReadStatus = (e) => {
         // const newStatus = e.target.value;
         console.log('onUpdate function:', onUpdate);
@@ -23,7 +19,7 @@ export function BookCard({ book, onDelete, onUpdate }) {
             <Card.Img id='card-image' variant='top' src={book.image} />
             <Card.Body>
                 <Card.Title id='title'><h2>{book.title}</h2></Card.Title>
-                <Card.Body id='card-body'>
+                <Card.Body id='card-body'> {/* stopped using Col to fix layout issues */}
                     <Row id='author'>
                         {/* <Col id='author'> */}
                             <h5>{book.author}</h5>

@@ -15,7 +15,7 @@ export function BookForm( { onAddBook } ) {
         e.preventDefault();
         const bookData = { title, author, image, genre, readStatus };
         
-        if (bookData.image == '') {
+        if (bookData.image == '') { //set default cover if no source is provided
             bookData.image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnKgLLxViflUuJStAO9ur5Of0ctQaGM3LC42SqkqiGSpbqKYpNDxVpWHcEkKL9zz6RUTY&usqp=CAU";
         }
 
@@ -24,9 +24,8 @@ export function BookForm( { onAddBook } ) {
         setAuthor('');
         setImage('');
         setGenre('');
-        setReadStatus('TBR');
-        navigate('/');
-        //TODO figure out how to automatically return to library page
+        setReadStatus('TBR'); //automatically reset everything
+        navigate('/'); //automatically return to library page
     }
     
 
@@ -89,7 +88,7 @@ export function BookForm( { onAddBook } ) {
                         label="Read Status"
                         className="mb-3"
                     >
-                        <Form.Select value={readStatus} onChange={(event) => setReadStatus(event.target.value)}>
+                        <Form.Select value={readStatus} onChange={(event) => setReadStatus(event.target.value)}> 
                             <option>Select read status</option>
                             <option value="TBR">TBR</option>
                             <option value="In Progress">In Progress</option>
@@ -99,7 +98,7 @@ export function BookForm( { onAddBook } ) {
                     </FormGroup>
                 </Col>
             </Row>
-            <Button type='submit' className='button' variant='dark'>Add Book</Button>
+            <Button type='submit' className='button' variant='dark'>Add Book</Button> 
         </Form>
     );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import ListLength from "../components/ListLength";
+// import ListLength from "../components/ListLength";
 import TBR from "../components/tbrList";
 
 export default function Statistics() {
@@ -44,7 +44,7 @@ export default function Statistics() {
     
     return (
         <>
-            {/* <ListLength books={books} /> */}
+            {/* <ListLength books={books} /> swapped out library length for tbr pile length */}
             <TBR books={books} onUpdate={handleUpdateReadStatus} />
         </>
     )

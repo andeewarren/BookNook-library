@@ -7,13 +7,13 @@ import { Navbar, NavDropdown, NavbarBrand, Nav } from 'react-bootstrap';
 function Header() {
     return (  
         <Navbar collapseOnSelect expand="lg" variant="dark">
-            <LinkContainer to='/' relative='path'>
-                <NavbarBrand>
+            <LinkContainer to='/' relative='path'> 
+                <NavbarBrand> 
                     <img
                         src={logo}
                         alt='BookNook logo'></img>
                 </NavbarBrand>
-            </LinkContainer>
+            </LinkContainer> {/* logo links to main library page */}
             <Navbar.Toggle aria-controls="basic-navbar-nav" className='toggler' />
             <Navbar.Collapse id="basic-navbar-nav">
                 
@@ -32,7 +32,7 @@ function Header() {
                         <Nav.Link>To Be Read</Nav.Link>
                     </LinkContainer>
                 </Nav>
-                <NavDropdown title='Account' id='basic-nav-dropdown' className='nav-link' menuVariant='light'>
+                <NavDropdown title='Account' id='basic-nav-dropdown' className='nav-link' menuVariant='light'> {/* light variant makes toggle light */}
                     <LinkContainer to='/logout'>
                         <NavDropdown.Item href='#action/3.1'>Sign Out</NavDropdown.Item>
                     </LinkContainer>
