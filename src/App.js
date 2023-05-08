@@ -53,10 +53,7 @@ function App() {
       if (!response.ok) {
         throw new Error('Failed to add book.');
       }
-
-      // const newBook = await response.json();
-      // setBooks((prevBooks) => [...prevBooks, newBook]);
-      fetchBooks();
+      fetchBooks(); //re renders list after add
       console.log("New book added successfuly");
     } catch (error) {
       console.error(error);
@@ -75,7 +72,7 @@ function App() {
       console.error(error);
     }
 
-    await fetchBooks();
+    await fetchBooks(); //re renders without having to refresh
   };
 
     const handleUpdate = async (id, newStatus) => {
@@ -93,20 +90,11 @@ function App() {
       throw new Error('Failed to update book.');
     }
 
-    fetchBooks();
+    fetchBooks(); //re renders
     console.log('Book updated successfully.');
-      // .then((res) => res.json())
-      // .then((data) => {
-      //   console.log(data);
-      //   const updatedBooks = books.map((book) =>
-      //     book.id === bookId ? { ...book, readStatus: newStatus } : book
-      //   );
-      //   setBooks(updatedBooks);
-      // })
   } catch (error) {
     console.error(error)
   }
-      // .catch((error) => console.error(error));
   };
 
 

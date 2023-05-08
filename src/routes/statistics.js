@@ -23,7 +23,7 @@ export default function Statistics() {
         fetchBooks();
     }, []);
 
-    const handleUpdateReadStatus = (bookId, newStatus) => {
+    const handleUpdateReadStatus = (bookId, newStatus) => { //update book read status just like home page
         fetch(`https://640a21d16ecd4f9e18c5cb25.mockapi.io/books/${bookId}`, {
             method: 'PUT',
             headers: {

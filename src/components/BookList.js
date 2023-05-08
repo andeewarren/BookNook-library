@@ -4,7 +4,7 @@ import { BookCard } from "./BookCard";
 
 export function BookList({ books, onDelete, onUpdate }) {
 
-    const sortedBooks = books.sort((a,b) => a.id - b.id);
+    const sortedBooks = books.sort((a,b) => a.id - b.id); //sorts by id, will reverse before mapping so new book is added to top
     //TODO sort alphabetically by title
 
     return (
