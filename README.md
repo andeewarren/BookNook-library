@@ -71,6 +71,13 @@
 <div align="center"> 
   <img src="src/assets/BookNook-homepage.png" alt="screenshot" />
 </div>
+<div>
+  <p>
+    <img src="src/assets/BookNook-add-book.png" alt="screenshot" />
+    <img src="src/assets/BookNook-tbr.png" alt="screenshot" />
+  </p>
+ </div>
+
 
 
 <!-- TechStack -->
@@ -215,3 +222,4 @@ Project Link: [https://github.com/andeewarren/BookNook-library](https://github.c
 Use this section to mention useful resources and libraries that you have used in your projects.
 
  - [Awesome README Template](https://github.com/Louis3797/awesome-readme-template)
+ - [Shields.io](https://shields.io/)
