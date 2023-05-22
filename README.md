@@ -106,10 +106,10 @@
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#263342](https://via.placeholder.com/10/222831?text=+) #263342 |
-| Secondary Color | ![#E4E5E7](https://via.placeholder.com/10/393E46?text=+) #E4E5E7 |
-| Accent Color | ![#685C71](https://via.placeholder.com/10/00ADB5?text=+) #685C71 |
-| Text Color | ![#FEFFF7](https://via.placeholder.com/10/EEEEEE?text=+) #FEFFF7 and ![#263342](https://via.placeholder.com/10/EEEEEE?text=+) #263342 |
+| Primary Color | ![#263342](https://via.placeholder.com/10/263342?text=+) #263342 |
+| Secondary Color | ![#E4E5E7](https://via.placeholder.com/10/E4E5E7?text=+) #E4E5E7 |
+| Accent Color | ![#685C71](https://via.placeholder.com/10/685C71?text=+) #685C71 |
+| Text Color | ![#FEFFF7](https://via.placeholder.com/10/FEFFF7?text=+) #FEFFF7 and ![#263342](https://via.placeholder.com/10/263342?text=+) #263342 |
 
 
 <!-- Env Variables -->
