@@ -12,23 +12,17 @@
   
 <!-- Badges -->
 <p>
-  <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Louis3797/awesome-readme-template" alt="contributors" />
+  <a href="https://github.com/andeewarren/BookNook-library/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/andeewarren/BookNook-library" alt="contributors" />
   </a>
   <a href="">
-    <img src="https://img.shields.io/github/last-commit/Louis3797/awesome-readme-template" alt="last update" />
+    <img src="https://img.shields.io/github/last-commit/andeewarren/BookNook-library" alt="last update" />
   </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/network/members">
-    <img src="https://img.shields.io/github/forks/Louis3797/awesome-readme-template" alt="forks" />
+  <a href="">
+    <img src="https://img.shields.io/github/commit-activity/m/andeewarren/BookNook-library" alt="commits" />
   </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/stargazers">
-    <img src="https://img.shields.io/github/stars/Louis3797/awesome-readme-template" alt="stars" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/issues/">
-    <img src="https://img.shields.io/github/issues/Louis3797/awesome-readme-template" alt="open issues" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/Louis3797/awesome-readme-template.svg" alt="license" />
+  <a href="https://github.com/andeewarren/BookNook-library/issues">
+    <img src="https://img.shields.io/github/issues/andeewarren/BookNook-library" alt="open issues" />
   </a>
 </p>
    
@@ -58,13 +52,10 @@
   * [Installation](#gear-installation)
   * [Running Tests](#test_tube-running-tests)
   * [Run Locally](#running-run-locally)
-  * [Deployment](#triangular_flag_on_post-deployment)
 - [Usage](#eyes-usage)
 - [Roadmap](#compass-roadmap)
 - [Contributing](#wave-contributing)
-  * [Code of Conduct](#scroll-code-of-conduct)
 - [FAQ](#grey_question-faq)
-- [License](#warning-license)
 - [Contact](#handshake-contact)
 - [Acknowledgements](#gem-acknowledgements)
 
@@ -85,13 +76,11 @@
 <!-- TechStack -->
 ### :space_invader: Tech Stack
 
-<details>
-  <summary>Client</summary>
+<h4>Client</h4>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
     <li><a href="https://react-bootstrap.github.io/getting-started/introduction/">React-Bootsrap</a></li>
   </ul>
-</details>
 
 
 <!-- Features -->
@@ -210,12 +199,6 @@ Contributions are always welcome!
 - What are your plans for this app in the future?
 
   + I want to add more functionality to the book list. I'd like to be able to sort and filter, as well as edit a book directly from its entry rather than deleting it and starting over. I'd also love to develop this into a mobile app once I have the knowledge.
-
-
-<!-- License -->
-## :warning: License
-
-Distributed under the no License. See LICENSE.txt for more information.
 
 
 <!-- Contact -->
