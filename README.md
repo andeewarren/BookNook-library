@@ -53,7 +53,6 @@
   * [Tech Stack](#space_invader-tech-stack)
   * [Features](#dart-features)
   * [Color Reference](#art-color-reference)
-  * [Environment Variables](#key-environment-variables)
 - [Getting Started](#toolbox-getting-started)
   * [Prerequisites](#bangbang-prerequisites)
   * [Installation](#gear-installation)
@@ -98,7 +97,7 @@
 <!-- Features -->
 ### :dart: Features
 
-- Add books with author, title, genre, cover image and whether you've read it
+- Include genre and whether the book has been read
 - See books marked as "to be read"
 
 <!-- Color Reference -->
@@ -112,25 +111,16 @@
 | Text Color | ![#FEFFF7](https://via.placeholder.com/10/FEFFF7?text=+) #FEFFF7 and ![#263342](https://via.placeholder.com/10/263342?text=+) #263342 |
 
 
-<!-- Env Variables -->
-### :key: Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
 <!-- Getting Started -->
 ## 	:toolbox: Getting Started
 
 <!-- Prerequisites -->
 ### :bangbang: Prerequisites
 
-This project uses Yarn as package manager
+This project uses Node.js as package manager
 
 ```bash
- npm install --global yarn
+ npm install -g npm
 ```
 
 <!-- Installation -->
@@ -139,9 +129,10 @@ This project uses Yarn as package manager
 Install my-project with npm
 
 ```bash
-  yarn install my-project
+  npm install my-project
   cd my-project
 ```
+
    
 <!-- Running Tests -->
 ### :test_tube: Running Tests
@@ -149,7 +140,7 @@ Install my-project with npm
 To run tests, run the following command
 
 ```bash
-  yarn test test
+  npm test
 ```
 
 <!-- Run Locally -->
@@ -158,7 +149,7 @@ To run tests, run the following command
 Clone the project
 
 ```bash
-  git clone https://github.com/Louis3797/awesome-readme-template.git
+  git clone https://github.com/andeewarren/BookNook-library.git
 ```
 
 Go to the project directory
@@ -170,75 +161,55 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  yarn install
+  npm install
 ```
 
 Start the server
 
 ```bash
-  yarn start
+  npm start
 ```
 
 
 <!-- Deployment -->
-### :triangular_flag_on_post: Deployment
+<!-- ### :triangular_flag_on_post: Deployment
 
 To deploy this project run
 
 ```bash
   yarn deploy
-```
+``` -->
 
 
 <!-- Usage -->
 ## :eyes: Usage
 
-Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
+Use this app to keep a digital record of books owned, with information such as the author and grnre, as well as if it's been read.
 
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
 
 <!-- Roadmap -->
 ## :compass: Roadmap
 
-* [x] Todo 1
-* [ ] Todo 2
+* [ ] Add ability to sort by title, author or genre
+* [ ] Create collections for more than TBR
 
 
 <!-- Contributing -->
 ## :wave: Contributing
 
-<a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Louis3797/awesome-readme-template" />
-</a>
-
-
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
-
-
-<!-- Code of Conduct -->
-### :scroll: Code of Conduct
-
-Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-template/blob/master/CODE_OF_CONDUCT.md)
 
 <!-- FAQ -->
 ## :grey_question: FAQ
 
-- Question 1
+- Why did you decide to build this app instead of something different?
 
-  + Answer 1
+  + I love collecting books but my memory isn't that great, so it's difficult when I'm at the bookstore and can't always remember if I own this book or I've read that book. Having a digital library keeps track of that for me. I also haven't found a similar app that I like for various reasons. The entry is always tedious, but I'd like to at least have something nice to look at while I work.
 
-- Question 2
+- What are your plans for this app in the future?
 
-  + Answer 2
+  + I want to add more functionality to the book list. I'd like to be able to sort and filter, as well as edit a book directly from its entry rather than deleting it and starting over. I'd also love to develop this into a mobile app once I have the knowledge.
 
 
 <!-- License -->
@@ -250,9 +221,9 @@ Distributed under the no License. See LICENSE.txt for more information.
 <!-- Contact -->
 ## :handshake: Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Andee Warren - [@LinkedIn](https://www.linkedin.com/in/andeewarren/)
 
-Project Link: [https://github.com/Louis3797/awesome-readme-template](https://github.com/Louis3797/awesome-readme-template)
+Project Link: [https://github.com/andeewarren/BookNook-library](https://github.com/andeewarren/BookNook-library)
 
 
 <!-- Acknowledgments -->
@@ -260,7 +231,4 @@ Project Link: [https://github.com/Louis3797/awesome-readme-template](https://git
 
 Use this section to mention useful resources and libraries that you have used in your projects.
 
- - [Shields.io](https://shields.io/)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
- - [Readme Template](https://github.com/othneildrew/Best-README-Template)
+ - [Awesome README Template](https://github.com/Louis3797/awesome-readme-template)
